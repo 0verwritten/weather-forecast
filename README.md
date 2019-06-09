@@ -7,3 +7,9 @@ __      _____  __ _| |_| |__   ___ _ __      / _| ___  _ __ ___  ___ __ _ ___ | 
  \ V  V /  __/ (_| | |_| | | |  __/ | |_____|  _| (_) | | |  __/ (_| (_| \__ \| |_
   \_/\_/ \___|\__,_|\__|_| |_|\___|_|       |_|  \___/|_|  \___|\___\__,_|___/\__|
 ```
+
+## Help
+
+### Console
+
+To get weather forecast for 1-5 days you have to enter `forecast for x days` and replace x with number of days
