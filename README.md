@@ -1,4 +1,4 @@
-# weather-forecast: application to get current weather info in any place
+# weather-forecast: get current weather info in any place
 
 ```
                     _   _                     __                               _
