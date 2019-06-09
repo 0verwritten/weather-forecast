@@ -7,6 +7,7 @@ loc = requests.get(f"http://ip-api.com/json/{r.json()['ip']}")
 city = loc.json()['city']
 
 for_five_day = f"http://api.openweathermap.org/data/2.5/forecast?q={city}&appid=377ef42e9dc5e87b6c24eb7dc069c30c" # """ - 5 days/3 hours """
+limit = 5 # days
 now =  f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid=377ef42e9dc5e87b6c24eb7dc069c30c" # """ - current """
 
 cur = requests.get(now).json()
@@ -33,6 +34,8 @@ while a != "":
 			print("You have to enter vaild command")
 		try:
 			days = int(a[-2])
+			if days > limit or days < 1:
+				print("Enter vaild command with vaild number of days (1-5)")
 			forecast(days)
 		except Exception as e:
 			print(e)
