@@ -5,6 +5,20 @@ import requests
 import time
 import sys
 
+class MainWindow(QtWidgets.QApplication, Ui_Weather):
+	def __init__(self, *args, **kwargs):
+		super(MainWindow, self).__init__([])
+		self.is_working = True
+		self.MainWindow = QtWidgets.QMainWindow()
+		r = requests.get('https://api.ipify.org?format=json')
+		self.setupUi(self.MainWindow)
+		self.MainWindow.show()
+
+	def update_cur_data(self,cur):
+		pass
+
+app = MainWindow()
+
 r = requests.get('https://api.ipify.org?format=json')
 
 loc = requests.get(f"http://ip-api.com/json/{r.json()['ip']}")
@@ -31,26 +45,14 @@ def forecast(days):
 			+ str(round(x['main']['temp_min'] - 273.15,2)) + ' to ' + str(round(x['main']['temp_max'] - 273.15,2))+')')
 
 def update_info():
-	while True:
+	while app.is_working:
 		cur = requests.get(now).json()
+		app.update_cur_data(cur)
 		r = forecast(6)
 		print(r)
 		print(cur)
-
-
-class MainWindow(QtWidgets.QApplication, Ui_Weather):
-	def __init__(self, *args, **kwargs):
-		super(MainWindow, self).__init__([])
-		self.MainWindow = QtWidgets.QMainWindow()
-		r = requests.get('https://api.ipify.org?format=json')
-		self.setupUi(self.MainWindow)
-		self.MainWindow.show()
-
-	def get_info(self):
-		print("Second thread starts")
-		while True:
-			time.sleep(3600)
+		time.sleep(3600)
 
 update = threading.Thread(target=update_info)
 update.start()
-sys.exit(MainWindow().exec())
+sys.exit(app.exec())
