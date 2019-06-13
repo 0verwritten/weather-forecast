@@ -130,7 +130,7 @@ class Ui_Weather(object):
 
     def retranslateUi(self, Weather):
         _translate = QtCore.QCoreApplication.translate
-        Weather.setWindowTitle(_translate("Weather", "Weather forecast"))
+        Weather.setWindowTitle(_translate("Weather", "Weather Forecast"))
         self.cur_city.setText(_translate("Weather", "London"))
         self.cur_description.setText(_translate("Weather", "clear sky"))
         self.cur_temp.setText(_translate("Weather", "25°"))
