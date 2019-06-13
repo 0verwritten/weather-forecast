@@ -2,7 +2,6 @@ from PyQt5 import QtWidgets, QtGui, QtCore
 from design import Ui_Weather
 from threading import Thread
 from requests import get
-import time ## not used
 import sys
 
 global state, ip, loc, city, for_five_day, now
