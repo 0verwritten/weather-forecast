@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'mainwindow.ui'
-#
-# Created by: PyQt5 UI code generator 5.9.2
-#
-# WARNING! All changes made in this file will be lost!
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_Weather(object):
@@ -84,43 +76,6 @@ class Ui_Weather(object):
         self.horizontalLayout_2.setContentsMargins(6, 0, 6, 0)
         self.horizontalLayout_2.setSpacing(6)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        """
-        self.widget = QtWidgets.QWidget(self.scrollAreaWidgetContents)
-        self.widget.setMinimumSize(QtCore.QSize(70, 181))
-        self.widget.setMaximumSize(QtCore.QSize(70, 181))
-        self.widget.setStyleSheet("background-color:#F4f4f4; border-radius:8px;")
-        self.widget.setObjectName("widget")
-        self.date = QtWidgets.QLabel(self.widget)
-        self.date.setGeometry(QtCore.QRect(0, 10, 70, 36))
-        font = QtGui.QFont()
-        font.setFamily("Lucida Grande")
-        font.setPointSize(10)
-        self.date.setFont(font)
-        self.date.setAlignment(QtCore.Qt.AlignTop)
-        self.date.setWordWrap(True)
-        #self.date.setObjectName("date")
-        self.img = QtWidgets.QLabel(self.widget)
-        self.img.setGeometry(QtCore.QRect(10, 32, 50, 50))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.img.sizePolicy().hasHeightForWidth())
-        self.img.setSizePolicy(sizePolicy)
-        self.img.setMaximumSize(QtCore.QSize(50, 50))
-        self.img.setText("")
-        self.img.setPixmap(QtGui.QPixmap("imgs/01d.png"))
-        self.img.setIndent(0)
-        #self.img.setObjectName("img")
-        self.desc = QtWidgets.QLabel(self.widget)
-        self.desc.setGeometry(QtCore.QRect(0, 78, 70, 101))
-        font = QtGui.QFont()
-        font.setFamily("Lucida Grande")
-        font.setPointSize(11)
-        self.desc.setFont(font)
-        self.desc.setWordWrap(True)
-        #self.desc.setObjectName("desc")
-        self.horizontalLayout_2.addWidget(self.widget)
-        """
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         self.verticalLayout.addWidget(self.scrollArea)
         Weather.setCentralWidget(self.centralwidget)
@@ -134,6 +89,3 @@ class Ui_Weather(object):
         self.cur_city.setText(_translate("Weather", "London"))
         self.cur_description.setText(_translate("Weather", "clear sky"))
         self.cur_temp.setText(_translate("Weather", "25°"))
-        #self.date_1.setText(_translate("Weather", "<html><head/><body><center><p>2019-06-10 09:00</p></center></body></html>"))
-        #self.desc_1.setText(_translate("Weather", "<html><head/><body><p align=\"center\">25°/30°</p><p align=\"center\"><span style=\" font-family:\'Lucida Grande\'; color:#000000;\">Humidity<br/>87% </span></p><p align=\"center\"><span style=\" font-family:\'Lucida Grande\'; color:#000000;\">Cloudiness<br>88%</span></p></body></html>"))
-

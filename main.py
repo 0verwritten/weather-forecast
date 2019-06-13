@@ -12,8 +12,6 @@ class MainWindow(QtWidgets.QApplication, Ui_Weather):
 	def __init__(self, th, data):
 		super(MainWindow, self).__init__([])
 		self.MainWindow = QtWidgets.QMainWindow()
-		#self.create_forecast = QtCore.pyqtSignal()
-		#self.create_forecast.connect()
 		self.setupUi(self.MainWindow)
 		self.first_update_forecast(data)
 		th.start()													# Start second thread
@@ -28,7 +26,8 @@ class MainWindow(QtWidgets.QApplication, Ui_Weather):
 	def update_forecast(self,forecast):
 		pass
 	def first_update_forecast(self, forecast):
-		self.widgets = [] 											# Array of widgets with forecast		for x in range(0,len(forecast)):
+		self.widgets = [] 											# Array of widgets with forecast
+		for x in range(0,len(forecast)):
 			widget = QtWidgets.QWidget(self.scrollAreaWidgetContents)
 			widget.setMinimumSize(QtCore.QSize(70, 181))
 			widget.setMaximumSize(QtCore.QSize(70, 181))
